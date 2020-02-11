@@ -2,7 +2,27 @@
 
 GPU miner for ETH,CKB,ETH-CKB
 
-# Help
+## Contact Us
+
+- Email: damominerofficial@gmail.com 
+
+## Performance (stock frequency)
+
+| Algorithm        |   Coin  |     1070    |   P102-10G  |    1080ti   |     1080    |
+| ---------------- | ------- |  ---------- |   --------  |   --------  |   --------  |
+| eaglesong        |   CKB   |      -      |     998M    |      -      |      -      |
+| ethash           |   ETH   |      -      |    47.2M    |     46M     |     35M     |
+| ethash+eaglesong | CKB+ETH | 383.1+24.9M | 439.9+43.6M | 657.6+45.9M | 529.5+31.1M |
+
+## Feature
+
+* Support Windows & Linux.
+* Support Dual-ming more fast.
+* Dev Fee: 
+  * ethash+eaglsong 2%ETH+1%CKB
+
+
+## CMD Option
 
 GPU miner,it is only support Nvidia card now !
 
@@ -24,56 +44,55 @@ GPU miner,it is only support Nvidia card now !
     --api-port          Default not set.range from (1~65535) 
                         listen on this port 
     --api-password      Default not set.you can set the password to protect your interaction
+    -I,--intensity      Dual ming mode ,ETH hashrate will faster and CKB hashrate will slower 
+                        with the smaller intensity range from (0~8).default 4
 
+## Requirements
 
-# Requirements
+### Linux 
 
-##  Linux 
+    damominer: NVIDIA Driver version:>=418.87,cuda 10.1
 
-    NVIDIA Driver version:>=418,cuda 10.1
+### windows
 
-## window 
+    damominer9: NVIDIA Driver version:>=385.54 cuda 9.0
+    damominer10: NVIDIA Driver version:>=418.96 cuda 10.1
 
-    support cuda9、cuda10
+## Sample Usages
 
-# Performance
+### Coin:ETH
 
+- **f2pool:** damominer -P stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.workname@cn.sparkpool.com:3333 -A eth
+- **sparkpool:** damominer -P stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.workname@eth.f2pool.com:8008 -A eth  
 
+## Coin:CKB
 
+- **sparkpool:** damominer -P stratum+tcp://sp_tttest.workname@ckb.sparkpool.com:8888 -A ckb
+- **f2pool:** damominer -P stratum+tcp://tttest.workname@ckb.f2pool.com:4300 -A ckb
 
-# Sample Usages
-
-## ETH
-
-### Linux
-
-    damominer -P stratum1+tcp://youraccount.workname@cn.sparkpool.com:3333 -A eth  --api-bind 127.0.0.1:3333
-
-### Window
-
-    damominer.exe -P stratum1+tcp://youraccount.workname@cn.sparkpool.com:3333 -A eth 
-
-## CKB
+## Coin:ETH-CKB
 
 ### Linux
 
-    damominer -P stratum+tcp://youraccount.workname@ckb.sparkpool.com:8888 -A ckb
+- **f2pool:** damominer -P stratum+tcp://sp_tttest.workname@ckb.sparkpool.com:8888 -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.workname@cn.sparkpool.com:3333 -A eth_ckb
+- **sparkpool:** damominer -P stratum+tcp://sp_tttest.workname@ckb.f2pool.com:4300 -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.workname@eth.f2pool.com:8008 -A eth_ckb
 
-### Window
+### Windows
 
-    damominer.exe -P stratum+tcp://youraccount.workname@ckb.sparkpool.com:8888  -A ckb 
+- **f2pool:** damominer -P stratum+tcp://sp_tttest.workname@ckb.sparkpool.com:8888 -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.workname@cn.sparkpool.com:3333 -A eth_ckb --mode 1
+- **sparkpool:** damominer -P stratum+tcp://sp_tttest.workname@ckb.f2pool.com:4300 -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.workname@eth.f2pool.com:8008 -A eth_ckb --mode 1
 
-## ETH-CKB
+## FAQ
 
-### Linux
+### Tuning parameter
 
-    damominer -P stratum1+tcp://youraccount.workname@cn.sparkpool.com:3333 -E stratum1+tcp://youraccount.workname@cn.sparkpool.com:3333 -A eth_ckb
+- **-I:** -I range(0,8),Dual-ming eth_ckb
+    1.If you want CKB have the best performance ,set I 8    
+    damominer -P stratum+tcp://sp_tttest.workname@ckb.sparkpool.com:8888 -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.workname@cn.sparkpool.com:3333 -A eth_ckb -I 8
+    2.If you want ETH have the best performance ,set I 0
+    damominer -P stratum+tcp://sp_tttest.workname@ckb.sparkpool.com:8888 -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.workname@cn.sparkpool.com:3333 -A eth_ckb -I 0
 
-### Window
-
-    damominer.exe -P stratum+tcp://youraccount.workname@ckb.sparkpool.com:8888  -E stratum1+tcp://youraccount.workname@cn.sparkpool.com:3333 -A eth_ckb --mode 1
-
-# API Reference
+## API Reference
 
     {
     "id": 1,
@@ -147,91 +166,7 @@ GPU miner,it is only support Nvidia card now !
                             18
                         ]
                     }
-                },
-                {
-                    "_index": 2,
-                    "_mode": "CUDA",
-                    "hardware": {
-                        "name": "P102-100 9.92 GB",
-                        "pci": "0a:00.0",
-                        "sensors": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "type": "GPU"
-                    },
-                    "mining": {
-                        "hashrate": "0x00084db2",
-                        "hashrate_sc": "0x216dbc00",
-                        "segment": [
-                            "0xe9624dbd2939f091",
-                            "0xe9624dbe2939f091"
-                        ],
-                        "shares": [
-                            0,
-                            0,
-                            0,
-                            18
-                        ]
-                    }
-                },
-                {
-                    "_index": 3,
-                    "_mode": "CUDA",
-                    "hardware": {
-                        "name": "P102-100 9.92 GB",
-                        "pci": "0b:00.0",
-                        "sensors": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "type": "GPU"
-                    },
-                    "mining": {
-                        "hashrate": "0x0008400d",
-                        "hashrate_sc": "0x1e64aec0",
-                        "segment": [
-                            "0xe9624dbe2939f091",
-                            "0xe9624dbf2939f091"
-                        ],
-                        "shares": [
-                            0,
-                            0,
-                            0,
-                            18
-                        ]
-                    }
-                },
-                {
-                    "_index": 4,
-                    "_mode": "CUDA",
-                    "hardware": {
-                        "name": "P102-100 9.92 GB",
-                        "pci": "0c:00.0",
-                        "sensors": [
-                            0,
-                            0,
-                            0
-                        ],
-                        "type": "GPU"
-                    },
-                    "mining": {
-                        "hashrate": "0x00085f42",
-                        "hashrate_sc": "0x1d059480",
-                        "segment": [
-                            "0xe9624dbf2939f091",
-                            "0xe9624dc02939f091"
-                        ],
-                        "shares": [
-                            0,
-                            0,
-                            0,
-                            18
-                        ]
-                    }
-                }
+                },               
             ],
             "host": {
                 "name": "N0101",
@@ -260,9 +195,9 @@ GPU miner,it is only support Nvidia card now !
         }
     }
 
-# History
+## History
 
-## V2.4.3 (20200207)
+### V2.4.3 (20200207)
 
     support ETH,CKB,ETH-CKB Dual ming.
     support Window & linux.
