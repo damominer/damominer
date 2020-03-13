@@ -4,7 +4,7 @@ GPU miner for ETH,CKB,ETH-CKB
 
 # Download
 
-    https://github.com/damominer/damominer/releases
+    [Download here](https://github.com/damominer/damominer/releases)
 
 ## Contact Us
 
@@ -20,10 +20,13 @@ GPU miner for ETH,CKB,ETH-CKB
 
 ## Feature
 
-* Support Windows & Linux.
-* Support Dual-ming more fast.
+* Supports Windows & Linux.
+* Supports faster dual-mining.
 * Dev Fee: 
   * ethash+eaglsong 2%ETH+1%CKB
+  * ethash+hns 3% ETH+HNS
+
+
 
 
 ## CMD Option
@@ -48,7 +51,7 @@ GPU miner,it is only support Nvidia card now !
     --api-port          Default not set.range from (1~65535) 
                         listen on this port 
     --api-password      Default not set.you can set the password to protect your interaction
-    -I,--intensity      Dual ming mode ,ETH hashrate will faster and CKB hashrate will slower 
+    -I,--intensity      Dual ming mode ,ETH hashrate will faster and slave coin hashrate will slower 
                         with the smaller intensity range from (0~8).default 4
 
 ## Requirements
@@ -57,7 +60,7 @@ GPU miner,it is only support Nvidia card now !
 
     damominer: NVIDIA Driver version:>=418.87,cuda 10.1
 
-### windows
+### Windows
 
     damominer9: NVIDIA Driver version:>=385.54 cuda 9.0
     damominer10: NVIDIA Driver version:>=418.96 cuda 10.1
@@ -100,6 +103,7 @@ GPU miner,it is only support Nvidia card now !
 
 ## API Reference
 
+    Request:
     {
     "id": 1,
     "jsonrpc": "2.0",
@@ -202,8 +206,12 @@ GPU miner,it is only support Nvidia card now !
     }
 
 ## History
+### V2.5.7 (20200313)
+
+    SupportS ETH-HNS Dual ming.
+    SupportS Window & linux.
 
 ### V2.4.3 (20200207)
 
-    support ETH,CKB,ETH-CKB Dual ming.
-    support Window & linux.
+    SupportS ETH,CKB,ETH-CKB Dual ming.
+    SupportS Window & linux.
