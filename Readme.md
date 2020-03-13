@@ -4,7 +4,7 @@ GPU miner for ETH,CKB,ETH-CKB
 
 # Download
 
-    [Download here](https://github.com/damominer/damominer/releases)
+[Download here](https://github.com/damominer/damominer/releases)
 
 ## Contact Us
 
