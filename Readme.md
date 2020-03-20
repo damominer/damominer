@@ -206,12 +206,17 @@ GPU miner,it is only support Nvidia card now !
     }
 
 ## History
+### V2.5.8 (20200320)
+
+    Supports nicehash protocal.
+    Update eth_hns hash rate.
+
 ### V2.5.7 (20200313)
 
-    SupportS ETH-HNS Dual ming.
-    SupportS Window & linux.
+    Supports ETH-HNS Dual ming.
+    Supports Window & linux.
 
 ### V2.4.3 (20200207)
 
-    SupportS ETH,CKB,ETH-CKB Dual ming.
-    SupportS Window & linux.
+    Supports ETH,CKB,ETH-CKB Dual ming.
+    Supports Window & linux.
