@@ -12,11 +12,15 @@ GPU miner for ETH,CKB,ETH-CKB
 
 ## Performance (stock frequency)
 
-| Algorithm        |   Coin  |     1070    |   P102-10G  |    1080ti   |     1080    |
-| ---------------- | ------- |  ---------- |   --------  |   --------  |   --------  |
-| eaglesong        |   CKB   |      -      |     998M    |      -      |      -      |
-| ethash           |   ETH   |      -      |    47.2M    |     46M     |     35M     |
-| ethash+eaglesong | CKB+ETH | 383.1+24.9M | 439.9+43.6M | 657.6+45.9M | 529.5+31.1M |
+| Algorithm           |   Coin  |     1070    |   P102-10G  |    1080ti   |     1080    |   P106-100  |   P104      |   2080 Ti   |    2060     |
+| ----------------    | ------- |  ---------- |   --------  |   --------  |   --------  |   --------  | --------    |   --------  |  --------   |
+| eaglesong           |   CKB   |      -      |     998M    |      -      |      -      |     -       |     -       |    -        |    -        |
+| ethash              |   ETH   |      -      |    47.2M    |     46M     |     35M     |     -       |     -       |    -        |    -        |
+| eaglesong+ethash    | CKB+ETH | 383.1+24.9M | 439.9+43.6M | 657.6+45.9M | 529.5+31.1M |     -       |     -       |    -        |    -        |
+| blake2b_sha3+ethash | HNS+ETH | 159.6+22.1M | 168.6+44.0M | 173.9+43.4M | 86.5+21.6M  | 74.2+18.6M  | 130.1+32.5M |    -        |    -        |
+| tellor+ethash       | TRB+ETH | 254.3+25.4M | 289.8+41.4M | 402.1+44.6M | 137.7+19.3M | 128.1+18.3M | 235.3+33.6M | 860.8+50.6M | 435.1+36.2M | 
+
+Note: - wait for update.
 
 ## Feature
 
@@ -25,7 +29,7 @@ GPU miner for ETH,CKB,ETH-CKB
 * Dev Fee: 
   * ethash+eaglsong 2%ETH+1%CKB
   * ethash+hns 3% ETH+HNS
-
+  * ethash+trb 3% ETH+TRB
 
 
 
@@ -43,7 +47,7 @@ GPU miner,it is only support Nvidia card now !
     -E                  Dual ming mode, set ETH pool, single ming mode only need set -P 
                         scheme://[account[.workername]@]hostname:port
 
-    -A                  Algorithm supported:ckb,eth,eth_ckb
+    -A                  Algorithm supported:ckb,eth,eth_ckb,eth_hns,eth_trb
     -h,--help           Displays this help text and exits
     -V,--version        Show program version and exits
     --api-bind          Default not set. Example:--api-bind 127.0.0.1:3333
@@ -76,6 +80,26 @@ GPU miner,it is only support Nvidia card now !
 
 - **sparkpool:** damominer -P stratum+tcp://sp_tttest.workname@ckb.sparkpool.com:8888 -A ckb
 - **f2pool:** damominer -P stratum+tcp://tttest.workname@ckb.f2pool.com:4300 -A ckb
+
+## Coin:ETH-TRB
+
+### Linux
+
+- **sparkpool:**damominer -P stratum+tcp://0x178ddc4da700bba670b635103476764771671dad.test@trb.uupool.cn:11002   -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.0707@cn.sparkpool.com:3333 -A eth_trb
+
+### Windows
+
+- **sparkpool:**damominer -P stratum+tcp://0x178ddc4da700bba670b635103476764771671dad.test@trb.uupool.cn:11002   -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.0707@cn.sparkpool.com:3333 -A eth_trb
+
+## Coin:ETH-HNS
+
+### Linux
+
+- **sparkpool:**damominer -P stratum+tcp://hs1qmggmnpwx72qy5fsm57rw42ktaah6h5gm50ss2e.test@hns.f2pool.com:6000   -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.0707@cn.sparkpool.com:3333 -A eth_hns
+
+### Windows
+
+- **sparkpool:**damominer.exe -P stratum+tcp://hs1qmggmnpwx72qy5fsm57rw42ktaah6h5gm50ss2e.test@hns.f2pool.com:6000   -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.0707@cn.sparkpool.com:3333 -A eth_hns
 
 ## Coin:ETH-CKB
 
@@ -206,6 +230,12 @@ GPU miner,it is only support Nvidia card now !
     }
 
 ## History
+
+### V2.6.3 (20200410)
+
+    Supports ETH-TRB dual ming.
+    Supports Window & linux.
+
 ### V2.5.8 (20200320)
 
     Supports nicehash protocal.
@@ -213,10 +243,10 @@ GPU miner,it is only support Nvidia card now !
 
 ### V2.5.7 (20200313)
 
-    Supports ETH-HNS Dual ming.
+    Supports ETH-HNS dual ming.
     Supports Window & linux.
 
 ### V2.4.3 (20200207)
 
-    Supports ETH,CKB,ETH-CKB Dual ming.
+    Supports ETH,CKB,ETH-CKB dual ming.
     Supports Window & linux.
