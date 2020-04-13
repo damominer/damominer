@@ -85,21 +85,21 @@ GPU miner,it is only support Nvidia card now !
 
 ### Linux
 
-- **sparkpool:**damominer -P stratum+tcp://0x178ddc4da700bba670b635103476764771671dad.test@trb.uupool.cn:11002   -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.0707@cn.sparkpool.com:3333 -A eth_trb
+- **sparkpool:** damominer -P stratum+tcp://0x178ddc4da700bba670b635103476764771671dad.test@trb.uupool.cn:11002   -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.0707@cn.sparkpool.com:3333 -A eth_trb
 
 ### Windows
 
-- **sparkpool:**damominer -P stratum+tcp://0x178ddc4da700bba670b635103476764771671dad.test@trb.uupool.cn:11002   -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.0707@cn.sparkpool.com:3333 -A eth_trb
+- **sparkpool:** damominer -P stratum+tcp://0x178ddc4da700bba670b635103476764771671dad.test@trb.uupool.cn:11002   -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.0707@cn.sparkpool.com:3333 -A eth_trb
 
 ## Coin:ETH-HNS
 
 ### Linux
 
-- **sparkpool:**damominer -P stratum+tcp://hs1qmggmnpwx72qy5fsm57rw42ktaah6h5gm50ss2e.test@hns.f2pool.com:6000   -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.0707@cn.sparkpool.com:3333 -A eth_hns
+- **sparkpool:** damominer -P stratum+tcp://hs1qmggmnpwx72qy5fsm57rw42ktaah6h5gm50ss2e.test@hns.f2pool.com:6000   -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.0707@cn.sparkpool.com:3333 -A eth_hns
 
 ### Windows
 
-- **sparkpool:**damominer.exe -P stratum+tcp://hs1qmggmnpwx72qy5fsm57rw42ktaah6h5gm50ss2e.test@hns.f2pool.com:6000   -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.0707@cn.sparkpool.com:3333 -A eth_hns
+- **sparkpool:** damominer.exe -P stratum+tcp://hs1qmggmnpwx72qy5fsm57rw42ktaah6h5gm50ss2e.test@hns.f2pool.com:6000   -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.0707@cn.sparkpool.com:3333 -A eth_hns
 
 ## Coin:ETH-CKB
 
