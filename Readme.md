@@ -44,7 +44,7 @@ GPU miner,it is only support Nvidia card now !
                         eth pool: stratum1+tcp://youraccount.workname@cn.sparkpool.com:3333
                         scheme://[account[.workername]@]hostname:port
 
-    -E                  Dual ming mode, set ETH pool, single ming mode only need set -P 
+    -E                  Dual mining mode, set ETH pool, single mining mode only need set -P 
                         scheme://[account[.workername]@]hostname:port
 
     -A                  Algorithm supported:ckb,eth,eth_ckb,eth_hns,eth_trb
@@ -55,7 +55,7 @@ GPU miner,it is only support Nvidia card now !
     --api-port          Default not set.range from (1~65535) 
                         listen on this port 
     --api-password      Default not set.you can set the password to protect your interaction
-    -I,--intensity      Dual ming mode ,ETH hashrate will faster and slave coin hashrate will slower 
+    -I,--intensity      Dual mining mode ,ETH hashrate will faster and slave coin hashrate will slower 
                         with the smaller intensity range from (0~8).default 4
 
 ## Requirements
@@ -117,7 +117,7 @@ GPU miner,it is only support Nvidia card now !
 
 ### Tuning parameter
 
-- **-I:** -I range(0,8),Dual-ming eth_ckb
+- **-I:** -I range(0,8),Dual-mining eth_ckb
   
     1.If you want CKB have the best performance ,set I 8    
     damominer -P stratum+tcp://sp_tttest.workname@ckb.sparkpool.com:8888 -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.workname@cn.sparkpool.com:3333 -A eth_ckb -I 8
@@ -233,7 +233,7 @@ GPU miner,it is only support Nvidia card now !
 
 ### V2.6.3 (20200410)
 
-    Supports ETH-TRB dual ming.
+    Supports ETH-TRB dual mining.
     Supports Window & linux.
 
 ### V2.5.8 (20200320)
@@ -243,10 +243,10 @@ GPU miner,it is only support Nvidia card now !
 
 ### V2.5.7 (20200313)
 
-    Supports ETH-HNS dual ming.
+    Supports ETH-HNS dual mining.
     Supports Window & linux.
 
 ### V2.4.3 (20200207)
 
-    Supports ETH,CKB,ETH-CKB dual ming.
+    Supports ETH,CKB,ETH-CKB dual mining.
     Supports Window & linux.
