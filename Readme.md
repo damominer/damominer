@@ -19,6 +19,7 @@ GPU miner for ETH,CKB,ETH-CKB
 | eaglesong+ethash    | CKB+ETH | 383.1+24.9M | 439.9+43.6M | 657.6+45.9M | 529.5+31.1M |     -       |     -       |    -        |    -        |
 | blake2b_sha3+ethash | HNS+ETH | 159.6+22.1M | 168.6+44.0M | 173.9+43.4M | 86.5+21.6M  | 74.2+18.6M  | 130.1+32.5M |    -        |    -        |
 | tellor+ethash       | TRB+ETH | 254.3+25.4M | 289.8+41.4M | 402.1+44.6M | 137.7+19.3M | 128.1+18.3M | 235.3+33.6M | 860.8+50.6M | 435.1+36.2M | 
+| kawpow              |  RVN    | 13.22M      | 23.92M      | 22.484M     |      -      | 10.4195     | 18.642M     |    -        |    -        |
 
 Note: - wait for update.
 
@@ -47,7 +48,7 @@ GPU miner,it is only support Nvidia card now !
     -E                  Dual mining mode, set ETH pool, single mining mode only need set -P 
                         scheme://[account[.workername]@]hostname:port
 
-    -A                  Algorithm supported:ckb,eth,eth_ckb,eth_hns,eth_trb
+    -A                  Algorithm supported:ckb,eth,eth_ckb,eth_hns,eth_trb,rvn
     -h,--help           Displays this help text and exits
     -V,--version        Show program version and exits
     --api-bind          Default not set. Example:--api-bind 127.0.0.1:3333
@@ -80,6 +81,10 @@ GPU miner,it is only support Nvidia card now !
 
 - **sparkpool:** damominer -P stratum+tcp://sp_tttest.workname@ckb.sparkpool.com:8888 -A ckb
 - **f2pool:** damominer -P stratum+tcp://tttest.workname@ckb.f2pool.com:4300 -A ckb
+
+## Coin:RVN
+
+- **Testpool:** damominer -P stratum+tcp://USER.worker@rvnt.minermore.com:4505 -A rvn
 
 ## Coin:ETH-TRB
 
@@ -230,6 +235,11 @@ GPU miner,it is only support Nvidia card now !
     }
 
 ## History
+
+### V2.6.6 (20200421)
+
+    Supports RVN mining.
+    Supports Window & linux.
 
 ### V2.6.3 (20200410)
 
