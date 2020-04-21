@@ -28,10 +28,12 @@ Note: - wait for update.
 * Supports Windows & Linux.
 * Supports faster dual-mining.
 * Dev Fee: 
+  * ethash 1% ETH
+  * eaglesong 3% CKB
   * ethash+eaglsong 2%ETH+1%CKB
   * ethash+hns 3% ETH+HNS
   * ethash+trb 3% ETH+TRB
-
+  * kawpow 2% RVN
 
 
 ## CMD Option
