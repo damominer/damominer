@@ -134,6 +134,7 @@ GPU miner,it is only support Nvidia card now !
 
 - **Environment Set:**  
     info: error while loading shared libraries: libcuda.so.1: cannot open shared object file: No such file or directory
+
     You should copy libnvrtc-builtins.so libnvrtc.so.10.1  to /usr/lib/ or add to LD_LIBRARY_PATH
 
 ## API Reference
