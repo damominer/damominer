@@ -1,6 +1,6 @@
 # DamoMiner
 
-GPU miner for ETH,CKB,ETH-CKB
+GPU miner for ETH,CKB,ETH-CKB,RVN,ETH-HNS,ETH-TRB
 
 # Download
 
@@ -132,6 +132,10 @@ GPU miner,it is only support Nvidia card now !
     2.If you want ETH have the best performance ,set I 0
     damominer -P stratum+tcp://sp_tttest.workname@ckb.sparkpool.com:8888 -E stratum1+tcp://0x43E5f72D6Ab08fB8034F0dFb34a480B9d256e53C.workname@cn.sparkpool.com:3333 -A eth_ckb -I 0
 
+- **Environment Set:**  
+    info: error while loading shared libraries: libcuda.so.1: cannot open shared object file: No such file or directory
+    You should copy libnvrtc-builtins.so libnvrtc.so.10.1  to /usr/lib/ or add to LD_LIBRARY_PATH
+
 ## API Reference
 
     Request:
@@ -236,17 +240,23 @@ GPU miner,it is only support Nvidia card now !
         }
     }
 
+
 ## History
+
+### V2.6.9 (20200429)
+
+    Update RVN hash rate.
+    Supports linux.
 
 ### V2.6.6 (20200421)
 
     Supports RVN mining.
-    Supports Window & linux.
+    Supports Windows & linux.
 
 ### V2.6.3 (20200410)
 
     Supports ETH-TRB dual mining.
-    Supports Window & linux.
+    Supports Windows & linux.
 
 ### V2.5.8 (20200320)
 
@@ -256,9 +266,9 @@ GPU miner,it is only support Nvidia card now !
 ### V2.5.7 (20200313)
 
     Supports ETH-HNS dual mining.
-    Supports Window & linux.
+    Supports Windows & linux.
 
 ### V2.4.3 (20200207)
 
     Supports ETH,CKB,ETH-CKB dual mining.
-    Supports Window & linux.
+    Supports Windows & linux.
