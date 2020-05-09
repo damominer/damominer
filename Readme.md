@@ -86,7 +86,7 @@ GPU miner,it is only support Nvidia card now !
 
 ## Coin:RVN
 
-- **Testpool:** damominer -P stratum+tcp://USER.worker@rvnt.minermore.com:4505 -A rvn
+- **Testpool:** damominer -P stratum+tcp://REAfY9iP8fHpc81FcqkQFWSSSWDVd2BKY4.worker@raven.f2pool.com:3636 -A rvn
 
 ## Coin:ETH-TRB
 
@@ -243,6 +243,11 @@ GPU miner,it is only support Nvidia card now !
 
 
 ## History
+
+### V2.7.5 (20200509)
+
+    Fix some issue on some pools.
+    Supports windows & linux.
 
 ### V2.6.9 (20200429)
 
