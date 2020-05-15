@@ -12,14 +12,14 @@ GPU miner for ETH,CKB,ETH-CKB,RVN,ETH-HNS,ETH-TRB
 
 ## Performance (stock frequency)
 
-| Algorithm           |   Coin  |     1070    |   P102-10G  |    1080ti   |     1080    |   P106-100  |   P104      |   2080 Ti   |    2060     |
-| ----------------    | ------- |  ---------- |   --------  |   --------  |   --------  |   --------  | --------    |   --------  |  --------   |
-| eaglesong           |   CKB   |      -      |     998M    |      -      |      -      |     -       |     -       |    -        |    -        |
-| ethash              |   ETH   |      -      |    47.2M    |     46M     |     35M     |     -       |     -       |    -        |    -        |
-| eaglesong+ethash    | CKB+ETH | 383.1+24.9M | 439.9+43.6M | 657.6+45.9M | 529.5+31.1M |     -       |     -       |    -        |    -        |
-| blake2b_sha3+ethash | HNS+ETH | 159.6+22.1M | 168.6+44.0M | 173.9+43.4M | 86.5+21.6M  | 74.2+18.6M  | 130.1+32.5M |    -        |    -        |
-| tellor+ethash       | TRB+ETH | 254.3+25.4M | 289.8+41.4M | 402.1+44.6M | 137.7+19.3M | 128.1+18.3M | 235.3+33.6M | 860.8+50.6M | 435.1+36.2M | 
-| kawpow              |  RVN    | 13.22M      | 23.92M      | 22.484M     |      -      | 10.4195     | 18.642M     |    -        |    -        |
+| Algorithm           | AMD/Nvidia|   Coin  |     1070    |   P102-10G  |    1080ti   |     1080    |   P106-100  |   P104      |   2080 Ti   |    2060     |
+| ----------------    | --------- |  ------ |  ---------- |   --------  |   --------  |   --------  |   --------  | --------    |   --------  |  --------   |
+| eaglesong           |   Nvidia  |   CKB   |      -      |     998M    |      -      |      -      |     -       |     -       |    -        |    -        |
+| ethash              |   Nvidia  |   ETH   |      -      |    47.2M    |     46M     |     35M     |     -       |     -       |    -        |    -        |
+| eaglesong+ethash    |   Nvidia  | CKB+ETH | 383.1+24.9M | 439.9+43.6M | 657.6+45.9M | 529.5+31.1M |     -       |     -       |    -        |    -        |
+| blake2b_sha3+ethash |   Nvidia  | HNS+ETH | 159.6+22.1M | 168.6+44.0M | 173.9+43.4M | 86.5+21.6M  | 74.2+18.6M  | 130.1+32.5M |    -        |    -        |
+| tellor+ethash       |   Nvidia  | TRB+ETH | 254.3+25.4M | 289.8+41.4M | 402.1+44.6M | 137.7+19.3M | 128.1+18.3M | 235.3+33.6M | 860.8+50.6M | 435.1+36.2M | 
+| kawpow              |   Both    |  RVN    | 13.22M      | 23.92M      | 22.484M     |      -      | 10.4195     | 18.642M     |    -        |    -        |
 
 Note: - wait for update.
 
@@ -38,7 +38,7 @@ Note: - wait for update.
 
 ## CMD Option
 
-GPU miner,it is only support Nvidia card now !
+GPU miner,it supports Nvidia card ,and supports AMD graphics on RVN coin only.
 
  Options :
 
@@ -86,7 +86,7 @@ GPU miner,it is only support Nvidia card now !
 
 ## Coin:RVN
 
-- **Testpool:** damominer -P stratum+tcp://REAfY9iP8fHpc81FcqkQFWSSSWDVd2BKY4.worker@raven.f2pool.com:3636 -A rvn
+- **f2pool:** damominer -P stratum+tcp://REAfY9iP8fHpc81FcqkQFWSSSWDVd2BKY4.worker@raven.f2pool.com:3636 -A rvn
 
 ## Coin:ETH-TRB
 
@@ -243,6 +243,11 @@ GPU miner,it is only support Nvidia card now !
 
 
 ## History
+
+### V2.7.8 (20200515)
+
+    Supports AMD card on RVN.
+    Supports windows & linux.
 
 ### V2.7.5 (20200509)
 
